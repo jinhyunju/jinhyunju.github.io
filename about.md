@@ -4,10 +4,7 @@ title: About
 group: navigation
 ---
 
-I am a PhD student at the Weill Cornell Graduate School of Medical Sciences.
-
-My current project focuses on developing a method based on Independent Component Analysis (ICA) for more accurate expression Quantitative Trait Loci (eQTL) analysis.
-
+I am currently a PhD student at the Weill Cornell Graduate School of Medical Sciences.
 
 ### Code
 [Personal Github Repo](http://github.com/jinhyunju/)
