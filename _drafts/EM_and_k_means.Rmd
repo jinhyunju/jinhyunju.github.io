@@ -1,0 +1,37 @@
+---
+title: "EM_algorithm"
+output: html_document
+---
+
+## The Expectation Maximization (EM) algorithm
+
+The purpose of this document is to explain the EM algorithm to myself and anyone
+else who can tolerate my bad writing. To ease up the pain of reading, I am including
+executable R code that will compensate for the short comings of my writing. 
+
+### The Problem
+
+Let us begin with an example problem that we might want to solve with the EM 
+algorithm. In this example, we are going to generate 2 dimensional data from two different 2-D (or multivariate in general) Gaussian distributions. 
+
+```{r}
+library(mvtnorm)
+
+data1 <- rmvnorm(100, mean = c(2,2), sigma = diag(2))
+data2 <- rmvnorm(100, mean = c(-4,-4), sigma = diag(2))
+
+observed.data <- rbind(data1,data2)
+
+```
+
+A good starting point would be to take a look at the data first. 
+
+```{r, fig.align='center'}
+
+plot(observed.data[,1],observed.data[,2], xlab = "x1", ylab = "x2")
+
+
+```
+
+We can see two clusters of data points 
+
